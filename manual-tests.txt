@@ -61,4 +61,13 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+# Module 6: Automatic submit after input - A.Y
+
+## Test Steps
+1. Build and run CiCo.
+2. Enter 00000000.
+
+## Expected Results
+When the last digit is entered, the status panel should appear and display whether the developer is checked in or out. Then, it should return to the scan card panel.
+
 
