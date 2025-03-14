@@ -106,6 +106,7 @@ public class Main {
   static JLabel labelUser;
   static JLabel labelState;
   static JButton buttonAcknowledge;
+  static JButton buttonNext; // Added button for the next person
 
   // Timer variables //////////////////////////////////////////////////////////
   static java.util.Timer timer;
@@ -318,6 +319,20 @@ public class Main {
     deck.add(panelStatus, CARD_STATE);
     deck.add(panelError, CARD_ERROR);
     frame.getContentPane().add(deck, BorderLayout.CENTER);
+
+    // New next person button /////////////////////////////////////////////////
+    buttonNext = new JButton("Next Person");
+    buttonNext.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    buttonNext.addActionListener(new Handler());
+    panelStatus.add(buttonNext);
+
+    deck.add(panelMain, CARD_MAIN);
+    deck.add(panelStatus, CARD_STATE);
+    deck.add(panelError, CARD_ERROR);
+
+    frame.add(deck);
+    frame.pack();
+    frame.setVisible(true);
 
     // Module 2 ticket: Add version number.
     JLabel labelMeta = new JLabel("CiCo v" + VERSION);
